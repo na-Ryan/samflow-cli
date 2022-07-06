@@ -1,4 +1,5 @@
 
+var figlet = require('figlet');
 module.exports =function (plop) {
     plop.setGenerator('new', {
         description: 'application controller logic',
@@ -31,7 +32,29 @@ module.exports =function (plop) {
             destination: '{{project_name}}/src/SumTask/',
             templateFiles: 'templates/SumTask/*.hbs',
             base : 'templates/SumTask'
+        },
+        {
+            type: 'welcomeMessage'
         }
         ]
+    });
+    plop.setActionType('welcomeMessage', function (answers, config, plop) {
+        figlet('S A M F L O W', function(err, data) {
+            if (err) {
+                console.log('Something went wrong...');
+                console.dir(err);
+                return;
+            }
+            console.log(`\n\n`);
+            console.log(data);
+            console.log(`\n`);
+            console.log(`Successfully created your project ${answers.project_name}`);
+            console.log(`Inside that directory, you can run several commands:\n`);
+
+            console.log(`We suggest that you begin by typing below command, this install prerequisite dependency \n`);
+            console.log(`cd ${answers.project_name}\nnpm install\n`);
+            console.log('You are awesome & Happy coding!');
+        });
+        
     });
 };
