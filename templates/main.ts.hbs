@@ -1,0 +1,16 @@
+import { SumTaskModel } from "./SumTaskModel";
+import { SumTaskProcess } from "./SumTaskProcess";
+
+
+let Bootstrap = {
+    model : SumTaskModel,
+    process : SumTaskProcess
+};
+
+
+let modelObj = new Bootstrap.model(3, 2);
+let processObj = new Bootstrap.process();
+let sum = processObj.executeTask(modelObj);
+console.log(sum);
+
+

@@ -1,0 +1,13 @@
+import { TaskModel } from "samflow-sdk";
+
+
+export class SumTaskModel extends TaskModel{
+    a : number;
+    b : number;
+    
+    constructor(a : number, b: number){
+        super();
+        this.a = a;
+        this.b = b;
+    }
+}

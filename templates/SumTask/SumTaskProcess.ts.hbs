@@ -1,0 +1,11 @@
+import { TaskProcess } from "samflow-sdk";
+import { SumTaskModel } from "./SumTaskModel";
+
+export class SumTaskProcess extends TaskProcess<SumTaskModel>{
+    
+    executeTask(modelObj: SumTaskModel): Object {
+        let returnObj = {};
+        return modelObj.a + modelObj.b;
+    }
+
+}

@@ -1,6 +1,6 @@
 
 module.exports =function (plop) {
-    plop.setGenerator('create', {
+    plop.setGenerator('new', {
         description: 'application controller logic',
         prompts: [{
             type: 'input',
@@ -25,6 +25,12 @@ module.exports =function (plop) {
             type: 'add',
             path: '{{project_name}}/.gitignore',
             templateFile: 'templates/.gitignore.hbs'
+        },
+        {
+            type: 'addMany',
+            destination: '{{project_name}}/src/SumTask/',
+            templateFiles: 'templates/SumTask/*.hbs',
+            base : 'templates/SumTask'
         }
         ]
     });
