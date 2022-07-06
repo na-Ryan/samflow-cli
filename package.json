@@ -1,21 +1,19 @@
 {
   "name": "samflow-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "samflow": "./index.js"
+  },
+  "preferGlobal": true,
   "author": "Narayan Chandran",
   "license": "MIT",
-  "bin" : "./index.js",
-  "dependencies": {
-    "chalk": "^5.0.1",
-    "chalk-animation": "^2.0.2",
-    "figlet": "^1.5.2",
-    "gradient-string": "^2.0.1",
-    "inquirer": "^9.0.0",
-    "nanospinner": "^1.1.0"
+  "devDependencies": {
+    "plop": "^3.1.1"
   }
 }
