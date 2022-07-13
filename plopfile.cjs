@@ -67,8 +67,8 @@ module.exports = function (plop) {
                     console.log(error);
                 }
                 if (stderr) {
-                    spinner.error({ text: 'Something went wrong while installing dependency, please check node version or contact the dev.' });
-                    console.log('stderr: ' + stderr);
+                    //spinner.error({ text: 'Something went wrong while installing dependency, please check node version or contact the dev.' });
+                    console.log('warning: ' + stderr);
                 }
                 if (stdout) {
                     spinner.success({ text: 'Successfully installed the dependency' });
