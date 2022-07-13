@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "debug": "node ./index.js"
   },
   "bin": {
@@ -15,7 +15,9 @@
   "author": "Narayan Chandran",
   "license": "MIT",
   "devDependencies": {
+    "chai": "^4.3.6",
     "figlet": "^1.5.2",
+    "mocha": "^10.0.0",
     "nanospinner": "^1.1.0",
     "plop": "^3.1.1"
   }
